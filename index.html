@@ -18,15 +18,18 @@
     .container {
       width: 100%;
       max-width: 1200px;
-      text-align: center;
       padding: 60px 40px;
       box-sizing: border-box;
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .header-image {
-      width: 140px;          /* controls image size */
-      margin: 0 auto 20px;
-      display: block;
+      width: 140px;
+      margin-bottom: 20px;
     }
 
     .title {
@@ -50,7 +53,21 @@
     .video-wrapper {
       width: 100%;
       max-width: 1100px;
-      margin: 60px auto 0;
+      margin-top: 60px;
+    }
+
+    .footer-text {
+      color: #ffffff;
+      font-family: "Times New Roman";
+      font-size: 14pt;
+      line-height: 1.4;
+      max-width: 900px;
+      margin-top: 40px;
+      text-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+    }
+
+    .footer-text p {
+      margin: 10px 0;
     }
   </style>
 </head>
@@ -58,22 +75,39 @@
 <body>
   <div class="container">
 
-    <!-- HEADER IMAGE -->
+    <!-- Header image (transparent PNG) -->
     <img src="cherub-header.png" alt="Cherub illustration" class="header-image">
 
+    <!-- Title + credits -->
     <p class="title">CHERUB</p>
     <p class="credit">Directed by Devin Shears</p>
     <p class="credit">Starring Benjamin Turnbull</p>
 
+    <!-- Video -->
     <div class="video-wrapper">
       <div style="padding:56.25% 0 0 0; position:relative;">
         <iframe
           src="https://player.vimeo.com/video/1163246207?h=39c6b2c784&badge=0&autopause=0&player_id=0&app_id=58479"
-          allow="autoplay; fullscreen; picture-in-picture"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
           style="position:absolute; top:0; left:0; width:100%; height:100%;"
           title="CHERUB_prores">
         </iframe>
       </div>
+    </div>
+
+    <!-- Footer credits -->
+    <div class="footer-text">
+      <p>
+        Produced by Mithila Majithia and Devin Shears, Cinematography by Nick Tiringer,
+        Production Design by Annette Wanjiku Wanjiru, Editing by Devin Shears,
+        1st AD Rebeca Ortiz, Sound Design by Michelle Lacour, Score by Anastasia Westcott
+      </p>
+
+      <p>
+        Made at York University’s Film MFA program with Supervisor John Greyson and
+        Reader Mary Bunch and supported by The Social Sciences and Humanities Research Council
+      </p>
     </div>
 
   </div>
